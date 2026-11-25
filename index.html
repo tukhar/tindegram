@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#E4EBF5">
+  <meta name="description" content="Swipe through Wikipedia one subject at a time and grow your own tree of rabbit holes.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <title>Tindegram</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Besley:wght@600;700;800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-depth="0" data-view="loading">
+  <div class="app">
+    <header class="top">
+      <h1 class="wordmark">Tindegram</h1>
+      <div class="top-actions">
+        <button class="pill" id="topicsBtn" type="button">Topics</button>
+        <button class="pill" id="treeBtn" type="button">Tree <span class="pill-count" id="treeCount">0</span></button>
+      </div>
+    </header>
+
+    <p class="trail" id="trail" aria-live="polite"></p>
+
+    <main class="stage" id="stage"></main>
+
+    <nav class="actions" aria-label="Decide on this subject">
+      <button class="act act--pass" id="passBtn" type="button">
+        <span class="act-disc">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </span>
+        Pass
+      </button>
+      <button class="act act--more" id="moreBtn" type="button">
+        <span class="act-disc">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 14l7-7 7 7"/></svg>
+        </span>
+        More
+      </button>
+      <button class="act act--dig" id="digBtn" type="button">
+        <span class="act-disc">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v6"/><path d="M12 9c0 6-6 5-6 12"/><path d="M12 9c0 6 6 5 6 12"/></svg>
+        </span>
+        Dig in
+      </button>
+    </nav>
+  </div>
+
+  <div class="sheet" id="sheet" hidden></div>
+  <div class="toast" id="toast" role="status"></div>
+
+  <noscript>Tindegram needs JavaScript to fetch subjects from Wikipedia.</noscript>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

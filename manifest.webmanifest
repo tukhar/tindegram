@@ -1,0 +1,13 @@
+{
+  "name": "Tindegram",
+  "short_name": "Tindegram",
+  "description": "Swipe through Wikipedia one subject at a time and grow your own tree of rabbit holes.",
+  "start_url": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#E4EBF5",
+  "theme_color": "#E4EBF5",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
